@@ -17,10 +17,16 @@ export class ClientesService {
 
   }
 
-  getCliente() :Cliente {
-    let cliente : Cliente;
-    cliente.nome = "paulo";
-    cliente.cpf="01010";
-    return cliente;
+  /*getCliente() :Observable<Cliente[]> {
+    return null;
+  }*/
+
+  getClientes() : Cliente[]{
+    let cliente = new Cliente();
+    cliente.id = 1;
+    cliente.nome = "Paulo Henrique";
+    cliente.cpf = "2012";
+    cliente.dataCadastro = "01/01/2020"
+    return [cliente];
   }
 }
