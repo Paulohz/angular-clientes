@@ -17,7 +17,7 @@ export class ClientesService {
   }
 
   salvar(cliente: Cliente) : Observable<Cliente> {
-    return this.http.post<Cliente>( `${this.apiURL}/api/clientes/`  , cliente)
+    return this.http.post<Cliente>( `${this.apiURL}`  , cliente)
   }
 
   atualizar(cliente: Cliente) : Observable<any> {
