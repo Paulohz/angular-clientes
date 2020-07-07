@@ -14,7 +14,7 @@ export class LoginComponent {
   password: string;
   cadastrando: boolean;
   mensagemSucesso: string;
-  errors: string[];
+  errors: string[] = [];
 
   constructor(
     private router: Router,
@@ -60,6 +60,7 @@ export class LoginComponent {
         this.errors = [];
       }, errorResponse => {
         this.mensagemSucesso = null;
+        console.log(errorResponse.error)
         this.errors = errorResponse.error.errors;
       })
       
